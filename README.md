@@ -6,7 +6,7 @@
 - Project Manager: 이지은(B) <br>
 - Product Manager: 김준섭(F) <br>
 - Teammates: 김희연(F), 박현아(F), 오승민(F), 오진석(B), 이소진(F) <br>
-- project flow : 회원가입 / 로그인 -> 메인 페이지 / 상품리스트 -> 상세페이지 -> 장바구니 -> 결제페이지 ->마이페이지
+- Project Flow : 회원가입 / 로그인 -> 메인 페이지 / 상품리스트 -> 상세페이지 -> 장바구니 -> 결제페이지 ->마이페이지
 
 <br>
 
