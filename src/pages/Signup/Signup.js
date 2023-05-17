@@ -53,7 +53,7 @@ const SignUp = () => {
       ) && userPassword.length !== 0,
     userPasswordOk: userPasswordOk === userPassword,
     userPhoneNumber:
-      /^01([0|1|6|7|8|9])-?([0-9]{3,4})-?([0-9]{4})$/.test(userPhoneNumber) &&
+      /^01([0|1|6|7|8|9])-\d{3,4}-\d{4}$/.test(userPhoneNumber) &&
       userPhoneNumber.length !== 0,
   };
 
@@ -83,7 +83,7 @@ const SignUp = () => {
       return;
     }
 
-    fetch('http://10.58.52.241:3000/users/signUp', {
+    fetch('http://13.209.8.13:3000/users/signUp', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json;charset=utf-8',
@@ -97,12 +97,33 @@ const SignUp = () => {
         phoneNumber: memberData.userPhoneNumber,
         birthDate: memberData.userBirth,
       }),
-    }).then(response => {
-      return response.json();
     });
-
-    alert('회원가입이 완료되었습니다!');
-    navigate('/login', { state: { from: 'signup' } });
+    fetch('http://13.209.8.13:3000/users/signUp', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify({
+        email: memberData.userId,
+        password: memberData.userPassword,
+        name: memberData.userName,
+        gender: memberData.gender,
+        address: memberData.userAddress,
+        phoneNumber: memberData.userPhoneNumber,
+        birthDate: memberData.userBirth,
+      }),
+    })
+      .then(res => res.json())
+      .then(result => {
+        if (result.message === `EMAIL_EXISTS`) {
+          alert('이미 사용 중인 아이디 입니다!');
+        } else if (result.message === `SIGNUP_SUCCESS`) {
+          console.log(result);
+          alert('회원가입이 완료되었습니다!');
+          navigate('/login', { state: { from: 'signup' } });
+        }
+      })
+      .catch(err => alert(err));
   };
 
   return (
@@ -113,7 +134,7 @@ const SignUp = () => {
           <h1>회원가입</h1>
         </div>
         <div className="basicinfo">
-          <div className="basic-info">기본정보</div>
+          <div className="basic-info">추가 정보</div>
         </div>
 
         <div className="signupform">
@@ -136,15 +157,14 @@ const SignUp = () => {
           })}
         </div>
         <div className="plusinfo">
-          <div className="plus-info">추가정보</div>
+          <div className="plus-info">고객정보</div>
         </div>
         <div className="plusinfoform">
           <div className="write-birth">
             <span className="birth">생년월일</span>
             <input
               className="input-birth"
-              type="text"
-              placeholder="YYYY-MM-DD"
+              type="date"
               name="userBirth"
               onChange={handleUserInput}
             />

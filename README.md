@@ -3,8 +3,8 @@
 - Team Name : Agile <br>
 - Project Name : Esteem-up <br>  <br>
 
-- Project Manager: 이지은(B) <br>
 - Product Manager: 김준섭(F) <br>
+- Project Manager: 이지은(B) <br>
 - Teammates: 김희연(F), 박현아(F), 오승민(F), 오진석(B), 이소진(F) <br>
 - Project Flow : 회원가입 / 로그인 -> 메인 페이지 / 상품리스트 -> 상세페이지 -> 장바구니 -> 결제페이지 ->마이페이지
 
@@ -15,6 +15,13 @@
 
 <div display=flex >
 
+### FRONTEND <br>
+<img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white">
+<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
+<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
+<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+<img src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=red"> 
+ 
 ### BACKEND <br>
 <img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
 <img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"> 
@@ -24,13 +31,6 @@
 <img src="https://img.shields.io/badge/TypeORM-262627?style=for-the-badge&logo=TypeORM&logoColor=white">
 <img src="https://img.shields.io/badge/postman-FF4500?style=for-the-badge&logo=postman&logoColor=white">
  
-### FRONTEND <br>
-<img src="https://img.shields.io/badge/html-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-<img src="https://img.shields.io/badge/react-61DAFB?style=for-the-badge&logo=react&logoColor=black">
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
-<img src="https://img.shields.io/badge/sass-CC6699?style=for-the-badge&logo=sass&logoColor=red"> 
-
 ### CO-OP TOOLS <br>
 <img src="https://img.shields.io/badge/github-181717?style=for-the-badge&logo=github&logoColor=white">
 <img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white">
@@ -43,6 +43,7 @@
 로그인 / 회원 가입 기능
 
 회원가입 기능 
+
 ![ezgif com-video-to-gif](https://github.com/wecode-bootcamp-korea/45-1st-Agile-frontend/assets/73672946/0288aea6-ed83-4fc3-9787-72f958c103bc)
 
 [FE] : 
@@ -50,6 +51,7 @@
 ● 회원가입시 이메일과 비밀번호를 입력할 때 유효성 검사에 어긋날 시 다시 입력할 수 있게 알림창이 나오도록 기능을  구현했습니다.
        
 로그인 기능
+
 ![ezgif com-video-to-gif (1)](https://github.com/wecode-bootcamp-korea/45-1st-Agile-frontend/assets/73672946/926b7263-26a6-41f2-a2d0-63b91b745a39)
 
 [FE] : 
