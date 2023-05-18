@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useLocation, useSearchParams } from 'react-router-dom';
-import APIS from '../../../config';
 import StarFullIcon from '../../Main/components/StarFullIcon';
 import SORTOPTION from './SORTOPTION';
 
@@ -23,7 +22,7 @@ const ProductListCont = ({ categoryId, subCategoryId }) => {
     priceDesc: '높은 가격순',
   };
   const handleLinkClick = () => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 550);
   };
   useEffect(() => {
     const fetchData = async () => {
@@ -128,6 +127,7 @@ const ProductListCont = ({ categoryId, subCategoryId }) => {
               }`}
               onClick={() => {
                 handlePageClick(page);
+                handleLinkClick();
               }}
             >
               {page}

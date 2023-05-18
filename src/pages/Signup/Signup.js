@@ -14,7 +14,6 @@ const SignUp = () => {
     userAddress: '',
     userPhoneNumber: '',
     userBirth: '',
-    userGender: '',
   });
 
   const { userId, userPassword, userPasswordOk, userPhoneNumber } = memberData;
@@ -63,14 +62,23 @@ const SignUp = () => {
   };
 
   const goToMain = () => {
-    const allCondtionMet = Object.keys(conditions).every(key => {
-      if (!conditions[key]) {
-        alert(ALERT_MESSAGE[key]);
-        return false;
-      } else {
-        return true;
-      }
-    });
+    const allCondtionMet =
+      Object.keys(conditions).every(key => {
+        if (!conditions[key]) {
+          alert(ALERT_MESSAGE[key]);
+          return false;
+        } else {
+          return true;
+        }
+      }) &&
+      Object.values(memberData).every(value => {
+        if (value === '') {
+          alert('고객정보를 기입해주세요.');
+          return false;
+        } else {
+          return true;
+        }
+      });
 
     if (!allCondtionMet) {
       return;
